@@ -1,0 +1,8 @@
+﻿Group: Bonner
+FriendlyName: Store Locations Map
+SystemName: Bonner.Nop.Plugin.StoreLocationsMap
+Version: 1.00
+SupportedVersions: 3.50
+Author: Bonner Enterprises
+DisplayOrder: 1
+FileName: Bonner.Nop.Plugin.StoreLocationsMap.dll

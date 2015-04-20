@@ -1,0 +1,1 @@
+-- there is no upgrade scripts from nopCommerce 3.40 to 3.50 for our products

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[SS_JC_JCarousel] (
+    [Id]                   INT            IDENTITY (1, 1) NOT NULL,
+    [Name]                 NVARCHAR (200) NOT NULL,
+    [Title]                NVARCHAR (250) NULL,
+    [NumberOfItems]        INT            NOT NULL,
+    [NumberOfVisibleItems] INT            NOT NULL,
+    [DataSourceType]       NVARCHAR (MAX) NULL,
+    [Skin]                 NVARCHAR (MAX) NULL,
+    [ImageSize]            INT            NOT NULL,
+    [ShowItemsName]        BIT            NOT NULL,
+    [ShowTitle]            BIT            NOT NULL,
+    [ShowProdictsPrice]    BIT            NOT NULL,
+    [ShowProdictsOldPrice] BIT            NOT NULL,
+    [ShowShortDescription] BIT            NOT NULL,
+    [ShowDetailsButton]    BIT            NOT NULL,
+    [CarouselOrientation]  BIT            NOT NULL,
+    [RightToLeft]          BIT            NOT NULL,
+    [StartIndex]           INT            NOT NULL,
+    [ScrollItems]          INT            NOT NULL,
+    [Easing]               NVARCHAR (MAX) NULL,
+    [Autoscroll]           INT            NOT NULL,
+    [WrapItems]            NVARCHAR (MAX) NULL,
+    [AnimationSpeed]       NVARCHAR (MAX) NULL,
+    [LimitedToStores]      BIT            NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

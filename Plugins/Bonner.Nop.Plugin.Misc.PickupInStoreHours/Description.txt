@@ -1,0 +1,8 @@
+﻿Group: Misc.PickUpInStoreHours 
+FriendlyName: Pick Up In Store Hours
+SystemName: Misc.PickUpInStoreHours
+Version: 1.0
+SupportedVersions: 3.50
+Author: Becky Bonner
+DisplayOrder: 1
+FileName: Bonner.Nop.Plugin.Misc.PickUpInStoreHours.dll

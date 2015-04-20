@@ -1,0 +1,187 @@
+﻿@{
+    Layout = "";
+}
+@model Bonner.Nop.Plugin.Misc.PickUpInStoreHours.Models.ConfigurationModel
+@using Nop.Web.Framework;
+@using (Html.BeginForm())
+{
+    <script>
+    $(document).ready(function () {
+        $("#@ViewData.TemplateInfo.GetFullHtmlFieldId(string.Empty)").kendoTimePicker(
+            { interval: 15 });
+    });
+    </script>
+    <table class="adminContent">
+        <tr>
+            <td class="adminTitle" colspan="2">
+                Configure In Store Pickup Options and available times
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="adminTitle">
+                @*@Html.OverrideStoreCheckboxFor(model => model.IsEnabled_OverrideForStore, model => model.IsEnabled, Model.ActiveStoreScopeConfiguration)*@
+                @Html.NopLabelFor(model => model.IsEnabled)
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.IsEnabled)
+                @Html.ValidationMessageFor(model => model.IsEnabled)
+            </td>
+        </tr>
+       <tr>
+           <td class="adminTitle">
+               @Html.NopLabelFor(model => model.Rate):
+           </td>
+           <td class="adminData">
+               @Html.EditorFor(model => model.Rate)
+               @Html.ValidationMessageFor(model => model.Rate)
+           </td>
+       </tr>
+        <tr>
+            <td class="adminTitle">
+                @Html.NopLabelFor(model => model.LeadTime)
+            </td>
+            <td class="adminData">
+                @Html.EditorFor(model => model.LeadTime)
+                @Html.ValidationMessageFor(model => model.LeadTime)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table class="adminContent">
+                    <tr>
+                        <th>Pickup Day</th>
+                        <th>Is Enabled</th>
+                        <th>Starting Hour</th>
+                        <th>Ending Hour</th>
+                    </tr>
+                    <tr>                       
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.SundayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledSunday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledSunday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.SundayStart, new { type = "time" })                          
+                            @Html.ValidationMessageFor(model => model.SundayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.SundayEnd)
+                            @Html.ValidationMessageFor(model => model.SundayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.MondayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledMonday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledMonday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.MondayStart)
+                            @Html.ValidationMessageFor(model => model.MondayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.MondayEnd)
+                            @Html.ValidationMessageFor(model => model.MondayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.TuesdayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledTuesday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledTuesday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.TuesdayStart)
+                            @Html.ValidationMessageFor(model => model.TuesdayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.TuesdayEnd)
+                            @Html.ValidationMessageFor(model => model.TuesdayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.WednesdayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledWednesday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledWednesday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.WednesdayStart)
+                            @Html.ValidationMessageFor(model => model.WednesdayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.WednesdayEnd)
+                            @Html.ValidationMessageFor(model => model.WednesdayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.ThursdayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledThursday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledThursday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.ThursdayStart)
+                            @Html.ValidationMessageFor(model => model.ThursdayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.ThursdayEnd)
+                            @Html.ValidationMessageFor(model => model.ThursdayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.FridayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledFriday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledFriday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.FridayStart)
+                            @Html.ValidationMessageFor(model => model.FridayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.FridayEnd)
+                            @Html.ValidationMessageFor(model => model.FridayEnd)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="adminTitle">
+                            @Html.NopLabelFor(model => model.SaturdayStart):
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.IsEnabledSaturday)
+                            @Html.ValidationMessageFor(model => model.IsEnabledSaturday)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.SaturdayStart)
+                            @Html.ValidationMessageFor(model => model.SaturdayStart)
+                        </td>
+                        <td class="adminData">
+                            @Html.EditorFor(model => model.SaturdayEnd)
+                            @Html.ValidationMessageFor(model => model.SaturdayEnd)
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="save" class="k-button" value="@T("Admin.Common.Save")" />
+            </td>
+        </tr>
+    </table>
+}

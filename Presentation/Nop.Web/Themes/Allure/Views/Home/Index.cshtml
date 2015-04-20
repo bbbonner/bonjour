@@ -1,0 +1,12 @@
+﻿@{
+    Layout = "~/Views/Shared/_ColumnsOneHome.cshtml";
+}
+<div class="page home-page">
+    <div class="page-body">
+        @Html.Widget("home_page_top")
+        @Html.Action("HomepageCategories", "Catalog")
+        @Html.Action("HomepageProducts", "Product")
+        @Html.Action("HomepageBestSellers", "Product")
+        @Html.Widget("home_page_bottom")
+    </div>
+</div>

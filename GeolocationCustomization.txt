@@ -1,0 +1,10 @@
+5854	1	SevenSpikes.StoreLocator.Public.SortMethod.SearchForShopInRadius	Search for locations in radius of
+5848	1	SevenSpikes.StoreLocator.Public.SearchMyLocation	Search Your Location
+5846	1	SevenSpikes.StoreLocator.Public.UseMyLocation	Use My Current Location
+5844	1	SevenSpikes.StoreLocator.Public.NoShops	We don't have any locations yet.
+5843	1	SevenSpikes.StoreLocator.Public.BackToAllShops	Back to all locations
+5840	1	SevenSpikes.StoreLocator.Public.AllShops.PageMetaDescription	All locations that offer our menu items
+5839	1	SevenSpikes.StoreLocator.Public.AllShops.LinkTitle	Location
+5838	1	SevenSpikes.StoreLocator.Public.AllShops.PageTitle	All our locations
+5837	1	SevenSpikes.StoreLocator.Public.GeoLocationNotSupported	Geolocation is not supported by your browser.
+5834	1	SevenSpikes.StoreLocator.Public.Title	Our locations
